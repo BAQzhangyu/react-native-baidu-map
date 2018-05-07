@@ -131,6 +131,21 @@ didSelectAnnotationView:(BMKAnnotationView *)view {
                             };
     [self sendEvent:mapView params:event];
 }
+- (void)mapView:(BMKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
+    CLLocationCoordinate2D targetGeoPt = [mapView getMapStatus].targetGeoPt;
+    NSDictionary* event = @{
+                            @"type": @"onMapStatusDidChange",
+                            @"params": @{
+                                    @"target": @{
+                                            @"latitude": @(targetGeoPt.latitude),
+                                            @"longitude": @(targetGeoPt.longitude)
+                                            },
+                                    @"zoom": @"",
+                                    @"overlook": @""
+                                    }
+                            };
+    [self sendEvent:mapView params:event];
+}
 
 -(void)sendEvent:(RCTBaiduMapView *) mapView params:(NSDictionary *) params {
     if (!mapView.onChange) {

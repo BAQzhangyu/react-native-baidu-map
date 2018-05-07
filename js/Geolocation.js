@@ -95,5 +95,19 @@ export default {
         resolve(resp);
       });
     });
+  },
+  getSearch(city,index,serachtext){
+      return new Promise((resolve, reject) => {
+          try {
+              _module.getSerachText(city,index,serachtext);
+          }
+          catch (e) {
+              reject(e);
+              return;
+          }
+          DeviceEventEmitter.once('onGetReversePoiResult', resp => {
+              resolve(resp);
+          });
+      });
   }
 };

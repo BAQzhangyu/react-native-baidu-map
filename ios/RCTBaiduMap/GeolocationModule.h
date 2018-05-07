@@ -11,11 +11,11 @@
 
 
 #import <BaiduMapAPI_Location/BMKLocationService.h>
-
+#import <BaiduMapAPI_Search/BMKPoiSearch.h>
 #import "BaseModule.h"
 #import "RCTBaiduMapViewManager.h"
 
-@interface GeolocationModule : BaseModule <BMKGeoCodeSearchDelegate> {
+@interface GeolocationModule : BaseModule <BMKGeoCodeSearchDelegate,BMKPoiSearchDelegate> {
 }
 
 @end

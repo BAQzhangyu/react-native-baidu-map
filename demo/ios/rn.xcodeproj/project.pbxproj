@@ -317,6 +317,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2A1B6920209C61CB00A67023 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AD882BEE0B5C45B598B53DFE /* libRCTActionSheet.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +384,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* rnTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				2A1B6920209C61CB00A67023 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
